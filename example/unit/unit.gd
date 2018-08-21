@@ -1,6 +1,6 @@
 extends Node2D
 
-const StateMachineFactory = preload("state_machine_factory.gd")
+const StateMachineFactory = preload("../../addons/godot-finite-state-machine/state_machine_factory.gd")
 const IdleState = preload("idle_state.gd")
 const PatrolState = preload("patrol_state.gd")
 const AttackState = preload("attack_state.gd")

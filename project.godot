@@ -11,9 +11,9 @@ config_version=3
 [application]
 
 config/name="New Game Project"
-run/main_scene="res://World.tscn"
-config/icon="res://icon.png"
+run/main_scene="res://example/World.tscn"
+config/icon="res://example/icon.png"
 
 [rendering]
 
-environment/default_environment="res://default_env.tres"
+environment/default_environment="res://example/default_env.tres"
