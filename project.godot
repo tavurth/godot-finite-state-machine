@@ -1,19 +1,7 @@
-; Engine configuration file.
-; It's best edited using the editor UI and not directly,
-; since the parameters that go here are not all obvious.
-;
-; Format:
-;   [section] ; section goes between []
-;   param=value ; assign values to parameters
-
 config_version=3
-
 [application]
-
-config/name="New Game Project"
+config/name="FSM bandit example"
 run/main_scene="res://example/World.tscn"
-config/icon="res://example/icon.png"
-
+config/icon="res://example/assets/bandit.png"
 [rendering]
-
 environment/default_environment="res://example/default_env.tres"

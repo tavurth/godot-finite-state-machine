@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://example/unit/unit.gd" type="Script" id=1]
 [ext_resource path="res://example/assets/bandit.png" type="Texture" id=2]
-[ext_resource path="res://example/player/Player.gd" type="Script" id=3]
+[ext_resource path="res://example/helpers/draw_circle.gd" type="Script" id=3]
+[ext_resource path="res://example/player/Player.gd" type="Script" id=4]
 
 [sub_resource type="CircleShape2D" id=1]
 
@@ -19,7 +20,7 @@ transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 
 [node name="Unit" type="Area2D" parent="." index="0"]
 
-position = Vector2( 514, 272 )
+position = Vector2( 331.707, 298.447 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -47,9 +48,19 @@ scale = Vector2( 0.4, 0.4 )
 texture = ExtResource( 2 )
 _sections_unfolded = [ "Material", "Transform", "Visibility" ]
 
+[node name="PatrolCircle" type="Node2D" parent="Unit" index="2"]
+
+script = ExtResource( 3 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="AttackCircle" type="Node2D" parent="Unit" index="3"]
+
+script = ExtResource( 3 )
+_sections_unfolded = [ "Transform" ]
+
 [node name="Player" type="Area2D" parent="." index="1"]
 
-position = Vector2( 755.569, 319.88 )
+position = Vector2( 777.776, 308.776 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -57,7 +68,7 @@ linear_damp = 0.1
 angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
-script = ExtResource( 3 )
+script = ExtResource( 4 )
 _sections_unfolded = [ "Transform" ]
 __meta__ = {
 "_edit_group_": true
