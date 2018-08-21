@@ -35,7 +35,7 @@ __meta__ = {
 
 [node name="Collision" type="CollisionShape2D" parent="Unit" index="0"]
 
-position = Vector2( -6.10352e-05, -0.735077 )
+position = Vector2( 1, 1 )
 scale = Vector2( 4, 4 )
 shape = SubResource( 1 )
 _sections_unfolded = [ "Transform" ]
@@ -65,7 +65,6 @@ __meta__ = {
 
 [node name="Collision" type="CollisionShape2D" parent="Player" index="0"]
 
-position = Vector2( -6.10352e-05, -0.735077 )
 scale = Vector2( 4, 4 )
 shape = SubResource( 1 )
 _sections_unfolded = [ "Transform" ]

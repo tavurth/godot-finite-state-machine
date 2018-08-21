@@ -32,13 +32,13 @@ func _process(delta):
 		state_machine.transition("attack")
 
 func _input(event):
-	# Command given to stop patrolling?
-	state_machine.transition("idle")
+	# We're far from the player, stop patrolling
+	if target.distance_from_player() > 100000:
+		state_machine.transition("idle")
 
 func _on_enter_state():
 	# Equip weapon
-	target.set_mode("war")
+	target.set_mode("patrolling")
 
 func _on_leave_state():
-	# Unequip weapon
-	target.set_mode("peace")
+	pass
