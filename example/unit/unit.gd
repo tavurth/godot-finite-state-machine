@@ -28,5 +28,14 @@ func _ready():
 	set_process(true)
 	set_process_input(true)
 
+func find_enemies():
+	pass
+
+func has_enemies():
+	return false
+
+func set_mode(newMode):
+	print('Set mode: ', newMode)
+
 func _process(delta): brain._process(delta)
 func _input(event): brain._input(event)
