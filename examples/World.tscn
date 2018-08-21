@@ -1,0 +1,74 @@
+[gd_scene load_steps=4 format=2]
+
+[sub_resource type="Curve" id=2]
+
+min_value = -471.37
+max_value = 406.35
+bake_resolution = 100
+_data = [  ]
+
+[sub_resource type="CurveTexture" id=3]
+
+flags = 4
+width = 2048
+curve = SubResource( 2 )
+
+[sub_resource type="CircleShape2D" id=1]
+
+custom_solver_bias = 0.0
+radius = 7.11056
+
+[node name="World" type="CanvasLayer" index="0"]
+
+layer = 1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+
+[node name="Unit" type="Area2D" parent="." index="0"]
+
+position = Vector2( 514, 272 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+_sections_unfolded = [ "Transform" ]
+
+[node name="Light2D" type="Light2D" parent="Unit" index="0"]
+
+position = Vector2( -6.10352e-05, -0.735077 )
+scale = Vector2( 4, 4 )
+enabled = true
+editor_only = false
+texture = SubResource( 3 )
+offset = Vector2( 0, 0 )
+texture_scale = 1.0
+color = Color( 1, 1, 1, 1 )
+energy = 1.0
+mode = 0
+range_height = 0.0
+range_z_min = -1024
+range_z_max = 1024
+range_layer_min = 0
+range_layer_max = 0
+range_item_cull_mask = 1
+shadow_enabled = false
+shadow_color = Color( 0, 0, 0, 0 )
+shadow_buffer_size = 2048
+shadow_gradient_length = 0.0
+shadow_filter = 0
+shadow_filter_smooth = 0.0
+shadow_item_cull_mask = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Unit" index="1"]
+
+position = Vector2( -6.10352e-05, -0.735077 )
+scale = Vector2( 4, 4 )
+shape = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+
